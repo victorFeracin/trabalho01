@@ -13,7 +13,6 @@ public class Cliente {
     private String name;
     private String email;
     private String phone;
-    private String password;
     
     
     //Getters
@@ -31,10 +30,6 @@ public class Cliente {
 
     public String getPhone() {
         return phone;
-    }
-
-    public String getPassword() {
-        return password;
     }
     
     
@@ -54,9 +49,15 @@ public class Cliente {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
     
+    //constructor
+    public Cliente() {
+        
+    }
+
+    public Cliente(String name, String email, String phone) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
 }
