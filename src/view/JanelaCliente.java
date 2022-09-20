@@ -62,14 +62,14 @@ public class JanelaCliente extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jLabelNome1 = new javax.swing.JLabel();
-        jTextFieldName1 = new javax.swing.JTextField();
+        jTextFieldIdUpdate = new javax.swing.JTextField();
         jLabelEmail1 = new javax.swing.JLabel();
-        jTextFieldEmail1 = new javax.swing.JTextField();
+        jTextFieldEmailUpdate = new javax.swing.JTextField();
         jLabelPhone1 = new javax.swing.JLabel();
-        jTextFieldPhone1 = new javax.swing.JTextField();
-        jButtonRegister1 = new javax.swing.JButton();
+        jTextFieldPhoneUpdate = new javax.swing.JTextField();
+        jButtonIdUpdate = new javax.swing.JButton();
         jLabelNome2 = new javax.swing.JLabel();
-        jTextFieldName2 = new javax.swing.JTextField();
+        jTextFieldNameUpdate = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,10 +133,11 @@ public class JanelaCliente extends javax.swing.JFrame {
 
         jLabelPhone1.setText("Phone:");
 
-        jButtonRegister1.setText("Register");
-        jButtonRegister1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonIdUpdate.setText("Update");
+        jButtonIdUpdate.setActionCommand("Update");
+        jButtonIdUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonRegister1MouseClicked(evt);
+                jButtonIdUpdateMouseClicked(evt);
             }
         });
 
@@ -174,18 +175,18 @@ public class JanelaCliente extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(277, 277, 277))
                     .addComponent(jScrollPane1)
-                    .addComponent(jTextFieldEmail1)
+                    .addComponent(jTextFieldEmailUpdate)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jTextFieldIdDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonRegister1)
+                            .addComponent(jButtonIdUpdate)
                             .addComponent(jLabelEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldPhoneUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jTextFieldName2)
+                    .addComponent(jTextFieldNameUpdate)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -199,7 +200,7 @@ public class JanelaCliente extends javax.swing.JFrame {
                                     .addComponent(jTextFieldIdSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonSearch)))
                             .addComponent(jLabelNome2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldName1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldIdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 242, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -252,21 +253,21 @@ public class JanelaCliente extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabelNome1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldIdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelNome2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldNameUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelEmail1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldEmailUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelPhone1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldPhoneUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonRegister1)
+                .addComponent(jButtonIdUpdate)
                 .addContainerGap(126, Short.MAX_VALUE))
         );
 
@@ -318,9 +319,15 @@ public class JanelaCliente extends javax.swing.JFrame {
         jTextPaneCustomers.setText(String.valueOf(controle.getSbClientes()));
     }//GEN-LAST:event_jButtonSearchMouseClicked
 
-    private void jButtonRegister1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegister1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonRegister1MouseClicked
+    private void jButtonIdUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonIdUpdateMouseClicked
+        try {
+            controle.updateCliente(jTextFieldIdUpdate.getText(), jTextFieldNameUpdate.getText(), jTextFieldEmailUpdate.getText(), jTextFieldPhoneUpdate.getText());
+            JOptionPane.showMessageDialog(this, "Customer successfully updated!", "Customer updated", JOptionPane.INFORMATION_MESSAGE);
+        }catch(Exception e) {
+            JOptionPane.showMessageDialog(this, "Error. Could not update customer.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_jButtonIdUpdateMouseClicked
 
     /**
      * @param args the command line arguments
@@ -359,9 +366,9 @@ public class JanelaCliente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonDelete;
+    private javax.swing.JButton jButtonIdUpdate;
     private javax.swing.JButton jButtonRead;
     private javax.swing.JButton jButtonRegister;
-    private javax.swing.JButton jButtonRegister1;
     private javax.swing.JButton jButtonSearch;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -383,14 +390,14 @@ public class JanelaCliente extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextField jTextFieldEmail;
-    private javax.swing.JTextField jTextFieldEmail1;
+    private javax.swing.JTextField jTextFieldEmailUpdate;
     private javax.swing.JTextField jTextFieldIdDelete;
     private javax.swing.JTextField jTextFieldIdSearch;
+    private javax.swing.JTextField jTextFieldIdUpdate;
     private javax.swing.JTextField jTextFieldName;
-    private javax.swing.JTextField jTextFieldName1;
-    private javax.swing.JTextField jTextFieldName2;
+    private javax.swing.JTextField jTextFieldNameUpdate;
     private javax.swing.JTextField jTextFieldPhone;
-    private javax.swing.JTextField jTextFieldPhone1;
+    private javax.swing.JTextField jTextFieldPhoneUpdate;
     private javax.swing.JTextPane jTextPaneCustomers;
     // End of variables declaration//GEN-END:variables
 }

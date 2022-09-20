@@ -6,6 +6,7 @@ package controller;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.StringTokenizer;
 import model.Cliente;
 
@@ -128,8 +129,39 @@ public class ControllerArquivoTextoCliente extends ControllerArquivoTexto {
         escrever(true);
     }
     
-    public void updateCliente() {
-        //todo
+    public void updateCliente(String idCliente, String name, String email, String phone) {
+        detokenize();
+        int i = 0;
+        for(Cliente cliente : clientes) {
+            try {
+                if(clientes.get(i).getIdCliente() == Integer.valueOf(idCliente)) {
+                    cliente.setName(name);
+                    cliente.setEmail(email);
+                    cliente.setPhone(phone);
+                    break;
+                    
+                }
+            } catch(Exception e) {
+                System.out.println("Error: Could not update customer.");
+            }
+            i++;
+        }
+        
+        for(Cliente cliente : clientes) {
+            sbClientes
+                    .append(cliente.getIdCliente())
+                    .append(";")
+                    .append(cliente.getName())
+                    .append(";")
+                    .append(cliente.getEmail())
+                    .append(";")
+                    .append(cliente.getPhone())
+                    .append(";");
+        }
+        
+        setTexto(sbClientes.toString());
+        getArquivo();
+        escrever(false);
     }
     
     public void searchCliente(String idCliente) {

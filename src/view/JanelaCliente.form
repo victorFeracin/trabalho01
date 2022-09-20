@@ -79,20 +79,20 @@
                               <EmptySpace min="-2" pref="277" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane1" max="32767" attributes="0"/>
-                          <Component id="jTextFieldEmail1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldEmailUpdate" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldIdDelete" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                                   <Component id="jLabelNome1" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jButtonRegister1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonIdUpdate" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelEmail1" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                                   <Component id="jLabelPhone1" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldPhone1" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldPhoneUpdate" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jTextFieldName2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldNameUpdate" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -109,7 +109,7 @@
                                       </Group>
                                   </Group>
                                   <Component id="jLabelNome2" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldName1" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldIdUpdate" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="242" max="32767" attributes="0"/>
                           </Group>
@@ -171,21 +171,21 @@
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jLabelNome1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextFieldName1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldIdUpdate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabelNome2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextFieldName2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldNameUpdate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabelEmail1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextFieldEmail1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldEmailUpdate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabelPhone1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextFieldPhone1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldPhoneUpdate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButtonRegister1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonIdUpdate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="126" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -319,28 +319,29 @@
                 <Property name="text" type="java.lang.String" value="ID:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldName1">
+            <Component class="javax.swing.JTextField" name="jTextFieldIdUpdate">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelEmail1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Email:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldEmail1">
+            <Component class="javax.swing.JTextField" name="jTextFieldEmailUpdate">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelPhone1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Phone:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldPhone1">
+            <Component class="javax.swing.JTextField" name="jTextFieldPhoneUpdate">
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonRegister1">
+            <Component class="javax.swing.JButton" name="jButtonIdUpdate">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Register"/>
+                <Property name="text" type="java.lang.String" value="Update"/>
+                <Property name="actionCommand" type="java.lang.String" value="Update"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonRegister1MouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonIdUpdateMouseClicked"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelNome2">
@@ -348,7 +349,7 @@
                 <Property name="text" type="java.lang.String" value="Name:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldName2">
+            <Component class="javax.swing.JTextField" name="jTextFieldNameUpdate">
             </Component>
           </SubComponents>
         </Container>
