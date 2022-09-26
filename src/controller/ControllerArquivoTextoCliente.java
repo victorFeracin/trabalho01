@@ -4,9 +4,7 @@
  */
 package controller;
 
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.StringTokenizer;
 import model.Cliente;
 
@@ -29,10 +27,6 @@ public class ControllerArquivoTextoCliente extends ControllerArquivoTexto {
     }
       
     //setters
-//    public void setClientes(String name, String email, String phone) {
-//        this.clientes.add(new Cliente(name, email, phone));
-//    }
-
     public void setSbClientes(StringBuilder sbClientes) {
         this.sbClientes = sbClientes;
     }
@@ -41,7 +35,6 @@ public class ControllerArquivoTextoCliente extends ControllerArquivoTexto {
     public void detokenize() {
         clientes.clear();
         sbClientes.setLength(0);
-//        setArquivo("Open", "Clientes.txt");
         getArquivo();
         if(ler() == true) {
             String aux = getTexto();

@@ -6,9 +6,6 @@ package view;
 
 import controller.ControllerArquivoTextoCliente;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.table.DefaultTableModel;
-import model.Cliente;
 
 /**
  *
