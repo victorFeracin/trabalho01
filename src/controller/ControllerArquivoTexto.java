@@ -48,10 +48,10 @@ public class ControllerArquivoTexto extends ControllerArquivo {
             return true;
         } catch (FileNotFoundException erro) {
             //erro.printStackTrace(); //usado para debug
-            System.err.println(erro.getMessage() + "Arquivo não encontrado.");
+            System.err.println("File not found. Ignore this error if you tried to create a new file.");
             return false;
         } catch (IOException erro) {
-            System.err.println(erro.getMessage() + "Erro ao ler arquivo.");
+            System.err.println(erro.getMessage() + "Error while reading file.");
             return false;
         }
     }
@@ -71,7 +71,7 @@ public class ControllerArquivoTexto extends ControllerArquivo {
                 escritor.close();
                 return true;
             } catch (IOException erro) {
-                System.err.println(erro.getMessage() + "Erro ao ler arquivo.");
+                System.err.println(erro.getMessage() + "Error while reading file.");
                 return false;
             }
         } else {
