@@ -70,6 +70,10 @@ public class JanelaCliente extends javax.swing.JFrame {
         jButtonIdUpdate = new javax.swing.JButton();
         jLabelNome2 = new javax.swing.JLabel();
         jTextFieldNameUpdate = new javax.swing.JTextField();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItemOpenSave = new javax.swing.JMenuItem();
+        jMenuItemClose = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,7 +138,6 @@ public class JanelaCliente extends javax.swing.JFrame {
         jLabelPhone1.setText("Phone:");
 
         jButtonIdUpdate.setText("Update");
-        jButtonIdUpdate.setActionCommand("Update");
         jButtonIdUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonIdUpdateMouseClicked(evt);
@@ -164,9 +167,9 @@ public class JanelaCliente extends javax.swing.JFrame {
                                     .addComponent(jButtonRegister, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelNome, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonRead, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(jButtonRead, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(16, 16, 16))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -183,8 +186,8 @@ public class JanelaCliente extends javax.swing.JFrame {
                             .addComponent(jLabelNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonIdUpdate)
                             .addComponent(jLabelEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldPhoneUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldPhoneUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jTextFieldNameUpdate)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -235,9 +238,9 @@ public class JanelaCliente extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldIdDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -273,6 +276,28 @@ public class JanelaCliente extends javax.swing.JFrame {
 
         jScrollPane3.setViewportView(jPanel2);
 
+        jMenu1.setText("File");
+
+        jMenuItemOpenSave.setText("Open/Save");
+        jMenuItemOpenSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemOpenSaveActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemOpenSave);
+
+        jMenuItemClose.setText("Close");
+        jMenuItemClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCloseActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemClose);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -282,7 +307,7 @@ public class JanelaCliente extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -290,8 +315,13 @@ public class JanelaCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonReadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonReadMouseClicked
-        controle.readCliente();
-        jTextPaneCustomers.setText(String.valueOf(controle.getSbClientes())); 
+        try {
+            controle.readCliente();
+            jTextPaneCustomers.setText(String.valueOf(controle.getSbClientes()));
+        }catch(Exception e) {
+            JOptionPane.showMessageDialog(this, "Error. Could not read customers.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+        }
+         
     }//GEN-LAST:event_jButtonReadMouseClicked
 
     private void jButtonRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegisterMouseClicked
@@ -315,8 +345,13 @@ public class JanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonDeleteMouseClicked
 
     private void jButtonSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSearchMouseClicked
-        controle.searchCliente(jTextFieldIdSearch.getText());
-        jTextPaneCustomers.setText(String.valueOf(controle.getSbClientes()));
+        try {
+            controle.searchCliente(jTextFieldIdSearch.getText());
+            jTextPaneCustomers.setText(String.valueOf(controle.getSbClientes()));
+        }catch(Exception e) {
+            JOptionPane.showMessageDialog(this, "Error. Could not search this customer.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+        }
+        
     }//GEN-LAST:event_jButtonSearchMouseClicked
 
     private void jButtonIdUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonIdUpdateMouseClicked
@@ -328,6 +363,14 @@ public class JanelaCliente extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButtonIdUpdateMouseClicked
+
+    private void jMenuItemCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCloseActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItemCloseActionPerformed
+
+    private void jMenuItemOpenSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOpenSaveActionPerformed
+        controle.setArquivo("Open/Save", "Clientes.txt");
+    }//GEN-LAST:event_jMenuItemOpenSaveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -383,6 +426,10 @@ public class JanelaCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNome2;
     private javax.swing.JLabel jLabelPhone;
     private javax.swing.JLabel jLabelPhone1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItemClose;
+    private javax.swing.JMenuItem jMenuItemOpenSave;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;

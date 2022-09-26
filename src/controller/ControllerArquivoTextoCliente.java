@@ -41,7 +41,8 @@ public class ControllerArquivoTextoCliente extends ControllerArquivoTexto {
     public void detokenize() {
         clientes.clear();
         sbClientes.setLength(0);
-        setArquivo("Open", "Clientes.txt");
+//        setArquivo("Open", "Clientes.txt");
+        getArquivo();
         if(ler() == true) {
             String aux = getTexto();
         
