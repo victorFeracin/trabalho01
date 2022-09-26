@@ -50,7 +50,7 @@ public class Cliente {
         this.phone = phone;
     }
     
-    //constructor
+    //Constructor
     public Cliente() {
         
     }
