@@ -4,19 +4,19 @@
  */
 package view;
 
-import controller.ControllerArquivoTextoCar;
+import controller.ControllerArquivoTextoBrand;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Victor Hugo
  */
-public class JanelaCar extends javax.swing.JFrame {
-    ControllerArquivoTextoCar controle = new ControllerArquivoTextoCar();
+public class JanelaBrand extends javax.swing.JFrame {
+    ControllerArquivoTextoBrand controle = new ControllerArquivoTextoBrand();
     /**
      * Creates new form JanelaCliente
      */
-    public JanelaCar() {
+    public JanelaBrand() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -39,13 +39,11 @@ public class JanelaCar extends javax.swing.JFrame {
         jTextFieldName = new javax.swing.JTextField();
         jLabelYear = new javax.swing.JLabel();
         jTextFieldYear = new javax.swing.JTextField();
-        jLabelBrand = new javax.swing.JLabel();
-        jTextFieldBrand = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextFieldPrice = new javax.swing.JTextField();
+        jLabelWebsite = new javax.swing.JLabel();
+        jTextFieldWebsite = new javax.swing.JTextField();
         jButtonRegister = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPaneCars = new javax.swing.JTextPane();
+        jTextPaneBrands = new javax.swing.JTextPane();
         jButtonRead = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
@@ -61,12 +59,10 @@ public class JanelaCar extends javax.swing.JFrame {
         jLabelYear1 = new javax.swing.JLabel();
         jTextFieldYearUpdate = new javax.swing.JTextField();
         jLabelBrand1 = new javax.swing.JLabel();
-        jTextFieldBrandUpdate = new javax.swing.JTextField();
+        jTextFieldWebsiteUpdate = new javax.swing.JTextField();
         jButtonIdUpdate = new javax.swing.JButton();
         jLabelNome2 = new javax.swing.JLabel();
         jTextFieldNameUpdate = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTextFieldPriceUpdate = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -80,15 +76,13 @@ public class JanelaCar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Register a Car");
+        jLabel2.setText("Register a Brand");
 
         jLabelNome.setText("Name:");
 
-        jLabelYear.setText("Year:");
+        jLabelYear.setText("Year of Creation:");
 
-        jLabelBrand.setText("Brand:");
-
-        jLabel7.setText("Price:");
+        jLabelWebsite.setText("Website:");
 
         jButtonRegister.setText("Register");
         jButtonRegister.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,9 +91,9 @@ public class JanelaCar extends javax.swing.JFrame {
             }
         });
 
-        jTextPaneCars.setEditable(false);
-        jTextPaneCars.setMinimumSize(new java.awt.Dimension(62, 15));
-        jScrollPane1.setViewportView(jTextPaneCars);
+        jTextPaneBrands.setEditable(false);
+        jTextPaneBrands.setMinimumSize(new java.awt.Dimension(62, 15));
+        jScrollPane1.setViewportView(jTextPaneBrands);
 
         jButtonRead.setText("Read");
         jButtonRead.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -108,7 +102,7 @@ public class JanelaCar extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Car ID:");
+        jLabel3.setText("Brand ID:");
 
         jButtonDelete.setText("Delete");
         jButtonDelete.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,7 +111,7 @@ public class JanelaCar extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Car ID:");
+        jLabel5.setText("Brand ID:");
 
         jButtonSearch.setText("Search");
         jButtonSearch.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -127,13 +121,13 @@ public class JanelaCar extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("Update a Car");
+        jLabel6.setText("Update a Brand");
 
         jLabelId1.setText("ID:");
 
-        jLabelYear1.setText("Year:");
+        jLabelYear1.setText("Year of Creation:");
 
-        jLabelBrand1.setText("Brand:");
+        jLabelBrand1.setText("Website:");
 
         jButtonIdUpdate.setText("Update");
         jButtonIdUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -144,13 +138,11 @@ public class JanelaCar extends javax.swing.JFrame {
 
         jLabelNome2.setText("Name:");
 
-        jLabel8.setText("Price:");
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Search a Car");
+        jLabel1.setText("Search a Brand");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel9.setText("Delete a Car");
+        jLabel9.setText("Delete a Brand");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -184,28 +176,24 @@ public class JanelaCar extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE, Short.MAX_VALUE)
                             .addComponent(jLabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelYear, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldYear, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldWebsite, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelId1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonIdUpdate)
-                            .addComponent(jLabelYear1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelBrand1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelNome2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldBrandUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldPriceUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldWebsiteUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
-                                .addGap(639, 639, 639)
+                                .addGap(622, 622, 622)
                                 .addComponent(jLabel1))
                             .addComponent(jTextFieldNameUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldYearUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldIdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldIdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelYear, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelWebsite, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelYear1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelBrand1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -224,20 +212,16 @@ public class JanelaCar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelBrand)
+                .addComponent(jLabelWebsite)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldBrand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldWebsite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(jButtonRegister)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonRead)
-                .addGap(22, 22, 22)
+                .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel9))
@@ -274,14 +258,10 @@ public class JanelaCar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelBrand1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldBrandUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
-                .addGap(4, 4, 4)
-                .addComponent(jTextFieldPriceUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(jTextFieldWebsiteUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonIdUpdate)
-                .addGap(30, 30, 30))
+                .addGap(91, 91, 91))
         );
 
         jScrollPane3.setViewportView(jPanel2);
@@ -327,40 +307,40 @@ public class JanelaCar extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemCloseActionPerformed
 
     private void jMenuItemOpenSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOpenSaveActionPerformed
-        controle.setArquivo("Open/Save", "Cars.txt");
+        controle.setArquivo("Open/Save", "Brands.txt");
         try {
-            controle.readCar();
-            jTextPaneCars.setText(String.valueOf(controle.getSbCars()));
+            controle.readBrand();
+            jTextPaneBrands.setText(String.valueOf(controle.getSbBrands()));
         }catch(Exception e) {
-            JOptionPane.showMessageDialog(this, "Error. Could not read cars.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error. Could not read brands.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
         }
         
     }//GEN-LAST:event_jMenuItemOpenSaveActionPerformed
 
     private void jButtonIdUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonIdUpdateMouseClicked
         try {
-            controle.updateCar(jTextFieldIdUpdate.getText(), jTextFieldNameUpdate.getText(), Integer.valueOf(jTextFieldYearUpdate.getText()), jTextFieldBrandUpdate.getText(), Double.valueOf(jTextFieldPriceUpdate.getText()));
-            JOptionPane.showMessageDialog(this, "Car successfully updated!", "Car updated", JOptionPane.INFORMATION_MESSAGE);
+            controle.updateBrand(jTextFieldIdUpdate.getText(), jTextFieldNameUpdate.getText(), Integer.valueOf(jTextFieldYearUpdate.getText()), jTextFieldWebsiteUpdate.getText());
+            JOptionPane.showMessageDialog(this, "Brand successfully updated!", "Brand updated", JOptionPane.INFORMATION_MESSAGE);
         }catch(Exception e) {
-            JOptionPane.showMessageDialog(this, "Error. Could not update car.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error. Could not update Brand.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_jButtonIdUpdateMouseClicked
 
     private void jButtonSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSearchMouseClicked
         try {
-            controle.searchCar(jTextFieldIdSearch.getText());
-            jTextPaneCars.setText(String.valueOf(controle.getSbCars()));
+            controle.searchBrand(jTextFieldIdSearch.getText());
+            jTextPaneBrands.setText(String.valueOf(controle.getSbBrands()));
         }catch(Exception e) {
-            JOptionPane.showMessageDialog(this, "Error. Could not search this car.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error. Could not search this brand.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_jButtonSearchMouseClicked
 
     private void jButtonDeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDeleteMouseClicked
         try {
-            controle.deleteCar(jTextFieldIdDelete.getText());
-            JOptionPane.showMessageDialog(this, "Car with ID " + jTextFieldIdDelete.getText() + " successfully removed", "Car removed", JOptionPane.INFORMATION_MESSAGE);
+            controle.deleteBrand(jTextFieldIdDelete.getText());
+            JOptionPane.showMessageDialog(this, "Brand with ID " + jTextFieldIdDelete.getText() + " successfully removed", "Car removed", JOptionPane.INFORMATION_MESSAGE);
         }catch(Exception e) {
             JOptionPane.showMessageDialog(this, "Error. Something went wrong.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
         }
@@ -369,21 +349,21 @@ public class JanelaCar extends javax.swing.JFrame {
 
     private void jButtonReadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonReadMouseClicked
         try {
-            controle.readCar();
-            jTextPaneCars.setText(String.valueOf(controle.getSbCars()));
+            controle.readBrand();
+            jTextPaneBrands.setText(String.valueOf(controle.getSbBrands()));
         }catch(Exception e) {
-            JOptionPane.showMessageDialog(this, "Error. Could not read cars.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error. Could not read brands.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_jButtonReadMouseClicked
 
     private void jButtonRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegisterMouseClicked
         try {
-            controle.registerCar(jTextFieldName.getText(), Integer.valueOf(jTextFieldYear.getText()), jTextFieldBrand.getText(), Double.valueOf(jTextFieldPrice.getText()), true);
-            JOptionPane.showMessageDialog(this, "Car successfully registered!", "Car registered", JOptionPane.INFORMATION_MESSAGE);
-            jTextPaneCars.setText(String.valueOf(controle.getSbCars()));
+            controle.registerBrand(jTextFieldName.getText(), Integer.valueOf(jTextFieldYear.getText()), jTextFieldWebsite.getText(), true);
+            JOptionPane.showMessageDialog(this, "Brand successfully registered!", "Brand registered", JOptionPane.INFORMATION_MESSAGE);
+            jTextPaneBrands.setText(String.valueOf(controle.getSbBrands()));
         }catch(Exception e) {
-            JOptionPane.showMessageDialog(this, "Error. Car not registered.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error. Brand not registered.", "Error: "+e, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonRegisterMouseClicked
 
@@ -404,14 +384,22 @@ public class JanelaCar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JanelaCar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaBrand.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JanelaCar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaBrand.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JanelaCar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaBrand.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JanelaCar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaBrand.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -424,7 +412,7 @@ public class JanelaCar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JanelaCar().setVisible(true);
+                new JanelaBrand().setVisible(true);
             }
         });
     }
@@ -440,14 +428,12 @@ public class JanelaCar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabelBrand;
     private javax.swing.JLabel jLabelBrand1;
     private javax.swing.JLabel jLabelId1;
     private javax.swing.JLabel jLabelNome;
     private javax.swing.JLabel jLabelNome2;
+    private javax.swing.JLabel jLabelWebsite;
     private javax.swing.JLabel jLabelYear;
     private javax.swing.JLabel jLabelYear1;
     private javax.swing.JMenu jMenu1;
@@ -461,17 +447,15 @@ public class JanelaCar extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField jTextFieldBrand;
-    private javax.swing.JTextField jTextFieldBrandUpdate;
     private javax.swing.JTextField jTextFieldIdDelete;
     private javax.swing.JTextField jTextFieldIdSearch;
     private javax.swing.JTextField jTextFieldIdUpdate;
     private javax.swing.JTextField jTextFieldName;
     private javax.swing.JTextField jTextFieldNameUpdate;
-    private javax.swing.JTextField jTextFieldPrice;
-    private javax.swing.JTextField jTextFieldPriceUpdate;
+    private javax.swing.JTextField jTextFieldWebsite;
+    private javax.swing.JTextField jTextFieldWebsiteUpdate;
     private javax.swing.JTextField jTextFieldYear;
     private javax.swing.JTextField jTextFieldYearUpdate;
-    private javax.swing.JTextPane jTextPaneCars;
+    private javax.swing.JTextPane jTextPaneBrands;
     // End of variables declaration//GEN-END:variables
 }

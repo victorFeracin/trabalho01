@@ -300,9 +300,7 @@ public class JanelaCliente extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1123, Short.MAX_VALUE)
         );
 
         pack();

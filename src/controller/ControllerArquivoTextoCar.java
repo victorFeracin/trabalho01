@@ -85,7 +85,6 @@ public class ControllerArquivoTextoCar extends ControllerArquivoTexto {
             cars.add(new Car(cars.get(cars.size() - 1).getIdCar() + 1, name, year, brand, price));
         }
         String aux = cars.get((cars.size() - 1)).getIdCar()+ ";" + cars.get((cars.size() - 1)).getName() + ";" + cars.get((cars.size() - 1)).getYear() + ";" + cars.get((cars.size() - 1)).getBrand() + ";" + cars.get((cars.size() - 1)).getPrice() + ";";
-        System.out.println("AUX: " + aux);
         setTexto(aux);
         getArquivo();
         escrever(appendFile);
